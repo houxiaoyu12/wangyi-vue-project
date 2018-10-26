@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <router-view></router-view>
-    <FooterGuide></FooterGuide>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    <FooterGuide v-if="$route.meta.isInterlayer"></FooterGuide>
   </div>
 </template>
 

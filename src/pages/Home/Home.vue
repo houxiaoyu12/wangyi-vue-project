@@ -1,5 +1,6 @@
 <template>
   <div id="scrollWrap">
+    <Masklayer/>
     <div class="homeContainer">
       <div class="headerWrap">
         <div class="homeHd">
@@ -111,6 +112,7 @@
   import Swiper from 'swiper'
 
   import goTop from '../../components/goTop/goTop.vue'
+  import Masklayer from '../../components/Masklayer/Masklayer'
 
 
 
@@ -120,7 +122,8 @@
 
     data() {
       return {
-        activeIndex: 0
+        activeIndex: 0,
+        isMaskLayer: false
       }
     },
     mounted() {
@@ -185,7 +188,8 @@
       }
     },
     components: {
-      goTop
+      goTop,
+      Masklayer
     }
 
 
@@ -212,6 +216,7 @@
       display flex
       justify-content space-between
       align-items center
+      border-bottom (1/$rem) solid #ccc
       span
         font-size (35/$rem)
         font-weight bold

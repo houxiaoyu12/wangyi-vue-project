@@ -3,10 +3,10 @@
     <div class="m-topBar">
       <div class="bg">
         <div class="row">
-          <span class="shouye"></span>
-          <span class="logo"></span>
-          <span class="search"></span>
-          <span class="cart"></span>
+          <span class="shouye" @click="$router.replace('/home')"></span>
+          <span class="logo" ></span>
+          <span class="search" @click="$router.replace('/home')"></span>
+          <span class="cart" @click="$router.replace('/Shopcart')"></span>
         </div>
       </div>
     </div>
@@ -20,7 +20,7 @@
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../common/stylus/mixins.styl"
   .m-topBar
-
+    border-bottom (1/$rem) solid #ccc
     width (750/$rem)
     position fixed
     top 0

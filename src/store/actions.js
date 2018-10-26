@@ -1,6 +1,6 @@
 import {reqData,reqBanner,reqHome,reqDetail} from '../api'
 
-import {Data,Banner,Home,Detail} from './mutation-types'
+import {Data,Banner,Home,Detail,LoginWay} from './mutation-types'
 
 export default {
   //获取首页data信息
@@ -29,5 +29,9 @@ export default {
     commit(Detail,{result})
     //console.log(result)
     cb && cb()
+  },
+  //获取loginWay数据
+  setLoginWay({commit},loginWay){
+    commit(LoginWay,loginWay)
   }
 }

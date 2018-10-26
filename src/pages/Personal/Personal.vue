@@ -7,13 +7,13 @@
           <img src="../../common/images/11.png" alt="">
         </div>
         <div class="btnWrap">
-          <div class="button-block" @click="goLogoin(true)">
-            <i class="iconfont icon-fangkuai"></i>
-            <span>手机号码登录</span>
+          <div class="button-block" @click="goLogin(true)">
+            <i class="iconfont icon-shouji"></i>
+            <span>账号登录</span>
           </div>
-          <div class="button-ghostRed" @click="goLogoin(false)">
+          <div class="button-ghostRed" @click="goLogin(false)">
             <i class="iconfont icon-youxiang"></i>
-            <span>邮箱账号登录</span>
+            <span>短信登录</span>
           </div>
           <div class="btn">
             <span>手机号快捷注册</span>
@@ -42,8 +42,18 @@
   import ShiwuHeader from '../../components/ShiwuHeader/ShiwuHeader'
   export default {
     data() {
-      return {}
+      return {
+        loginWay:null
+      }
     },
+    methods: {
+      goLogin(loginWay1){
+        this.loginWay = loginWay1
+        this.$router.replace('/login')
+        this.$store.dispatch('setLoginWay',this.loginWay)
+      }
+    },
+
     components: {
       ShiwuHeader
     }

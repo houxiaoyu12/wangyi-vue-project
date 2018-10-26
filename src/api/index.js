@@ -8,3 +8,4 @@ export const reqBanner = () => ajax('/banner')
 export const reqHome = () => ajax('/home')
 //获取detail数据
 export const reqDetail = () => ajax('/detail')
+
