@@ -1,6 +1,6 @@
-import {reqData,reqBanner,reqHome,reqDetail} from '../api'
+import {reqData,reqBanner,reqHome,reqDetail,reqNav} from '../api'
 
-import {Data,Banner,Home,Detail,LoginWay} from './mutation-types'
+import {Data,Banner,Home,Detail,LoginWay,Nav} from './mutation-types'
 
 export default {
   //获取首页data信息
@@ -33,5 +33,11 @@ export default {
   //获取loginWay数据
   setLoginWay({commit},loginWay){
     commit(LoginWay,loginWay)
+  },
+  //获取nav
+  async getNav({commit},cb){
+    const result = await reqNav()
+    commit(Nav,{result})
+    cb && cb()
   }
 }

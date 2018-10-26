@@ -4,5 +4,6 @@ export default {
   banner:[], //保存banner轮播图数据
   home: {},  //保存home制造商品信息数据
   detail: {}, //保存detaill轮播图数据
-  loginWay: null  //显示哪种登录方式
-}
+  loginWay: null, //显示哪种登录方式
+  nav: {} //保存分类列表数据
+ }

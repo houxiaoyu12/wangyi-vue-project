@@ -3,7 +3,7 @@
     <div class="m-exploreLook" v-if="detail.yxLook">
       <div class="module-title">严选LOOK</div>
       <div class="content">
-        <img :src="detail.yxLook.picUrl" alt="">
+        <img v-lazy="detail.yxLook.picUrl" alt="">
         <div class="topicInfo">
           <div class="author-container">
             <div class="author">

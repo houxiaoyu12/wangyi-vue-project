@@ -7,7 +7,7 @@
     <div class="wrap">
       <div class="content" v-for="(item,index) in detail.findMore">
         <div class="imgContainer">
-          <img :src="item.itemPicUrl" alt="">
+          <img v-lazy="item.itemPicUrl" alt="">
         </div>
         <div class="desc">{{item.subTitle}}</div>
       </div>

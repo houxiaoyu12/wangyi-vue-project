@@ -1,4 +1,4 @@
-import {Data,Banner,Home,Detail,LoginWay} from './mutation-types'
+import {Data,Banner,Home,Detail,LoginWay,Nav} from './mutation-types'
 
 export default {
   [Data](state,{data}){
@@ -18,6 +18,11 @@ export default {
   },
   [LoginWay](state,loginWay){
     state.loginWay = loginWay
+  },
+  [Nav](state,{result}){
+    const {nav} = result
+    state.nav = nav
+    //console.log(result)
   }
 
 }
